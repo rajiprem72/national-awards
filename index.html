@@ -213,7 +213,7 @@ Apply Now
 
 <h2>Section A – Personal Details</h2>
 
-<input type="text" placeholder="Full Name" required><br><br>
+<input type="text" placeholder="Full Name (as to appear on Certificate)" required><br><br>
 
 <input type="text" placeholder="Mobile Number" required><br><br>
 
@@ -332,16 +332,37 @@ sections[currentSection].classList.add("active");
 
 const awardsData={
 
-3000:["Rising Star Award","Emerging Leader Award","Young Achiever Award"],
+3000:["Rising Star Award – Young professionals showing early success","Emerging Leader Award – Upcoming leaders in any field",
+"Young Achiever Award – Individuals under 35 with notable achievements","Startup Star Award – New startup founders (1–5 years)",
+"Youth Inspiration Award – Youth motivating others","Community Star Award – Local community contributors","Women Achiever Award – Women excelling in any profession",
+"Social Contributor Award – Individuals involved in social work","Excellence in Service Award – Service-oriented professionals",
+"Promising Talent Award – Individuals with exceptional potential"],
 
-7500:["Professional Excellence Award","Business Excellence Award"],
+7500:["Excellence Award – Professionals with consistent performance","Professional Excellence Award – Doctors, Lawyers, Teachers, Engineers, etc.",
+"Business Excellence Award – Business owners & entrepreneurs","Education Excellence Award – Educators & institution heads",
+"Health & Wellness Excellence Award – Healthcare & wellness experts","Innovation Excellence Award – Innovators & creative thinkers",
+"Social Impact Award – NGOs & social activists","Leadership Excellence Award – Team leaders & managers","Cultural Excellence Award – Artists & cultural promoters",
+"Brand Excellence Award – Business brands with strong reputation"],
+  
+15000:["National Icon Award – Influential personalities with national presence","Pride of India Award – Individuals contributing to nation-building",
+"Bharat Excellence Award – Senior professionals with impact","National Leadership Award – Leaders with large-scale influence",
+"Icon of Influence Award – Public figures & influencers","Nation Builder Award – Contributors to societal development",
+"Inspirational Leader Award – Motivational personalities","Industry Icon Award – Industry-leading professionals",
+"Corporate Leader Award – Corporate executives & directors","Visionary Leader Award – Strategic thinkers & founders"],
+  
 
-15000:["National Icon Award","Pride of India Award"],
+25000:["International Leadership Award – Global business/social leaders","Global Icon Award – International influencers",
+"International Excellence Award – Professionals with global reach","World Impact Award – Individuals with worldwide impact",
+"Global Business Leader Award – International entrepreneurs","International Social Excellence Award – Global social activists",
+"Global Visionary Award – Forward-thinking global leaders","International Brand Leader Award – Global brands & founders",
+"Global Inspiration Award – International motivational personalities"],
 
-25000:["Global Achiever Award","International Leadership Award"],
-
-50000:["Lifetime Achievement Award","Hall of Fame Award"]
-
+50000:["Lifetime Achievement Award – 20+ years of outstanding contribution","Hall of Fame Award – Highly reputed senior personalities",
+"Supreme Excellence Award – Top achievers in their field","Grand Icon Award – Nationally celebrated personalities",
+"Diamond Excellence Award – Elite high-level achievers","Platinum Leadership Award – Senior executive leaders",
+"Pride of the Nation Award – Exceptional national contributors","Universal Excellence Award – Multi-field contributors",
+"Legendary Leader Award – Long-standing influential leaders","Eminent Personality Award – Highly respected dignitaries"]
+  
 };
 
 function loadAwards(){
