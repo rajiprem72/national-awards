@@ -8,24 +8,79 @@
 
 <title>Pride of India National Awards 2026</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+.banner img{
+width:100%;
+}
+
+section{
+background:white;
+padding:30px;
+margin:20px;
+border-radius:8px;
+}
+
+h1,h2{
+color:#b22222;
+}
+
+.apply-btn{
+background:#b22222;
+color:white;
+padding:15px 30px;
+border:none;
+font-size:18px;
+cursor:pointer;
+}
+
+.section{
+display:none;
+padding:30px;
+background:white;
+margin:20px;
+border-radius:8px;
+}
+
+.section.active{
+display:block;
+}
+
+.awards-list label{
+display:block;
+}
+
+.total-box{
+font-size:20px;
+font-weight:bold;
+margin-top:15px;
+color:#b22222;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- HORIZONTAL BANNER -->
+<!-- Banner -->
 
-<header class="banner">
+<div class="banner">
 
-<img src="assets/banner.jpg" alt="Pride of India National Awards Banner">
+<img src="assets/banner.jpg">
 
-</header>
+</div>
 
 
-<!-- EVENT TITLE -->
+<!-- Title -->
 
-<section class="title-section">
+<section>
 
 <h1>🏆 Pride of India National Awards – 2026</h1>
 
@@ -34,61 +89,59 @@
 </section>
 
 
-
-<!-- EVENT DETAILS -->
+<!-- Event Details -->
 
 <section>
 
 <h2>📅 Event Details</h2>
 
-<p><b>Date:</b> April 26, 2026</p>
-<p><b>Time:</b> 4:00 PM – 7:00 PM</p>
-<p><b>Venue:</b> Simsan Hotel, Chennai</p>
+<p><strong>Date:</strong> April 26, 2026</p>
 
-<p><b>Organized By</b></p>
+<p><strong>Time:</strong> 4:00 PM – 7:00 PM</p>
+
+<p><strong>Venue:</strong> Simsan Hotel, Chennai</p>
+
+<h3>Organized By</h3>
 
 <ul>
+
 <li>Global Achievers Foundation</li>
 <li>G & G Group of Institutions</li>
+
 </ul>
 
-<p><b>Co-Sponsored By</b></p>
+<h3>Co-Sponsored By</h3>
 
 <ul>
+
 <li>Veda Mandir Education</li>
-<li>Dial4Teachers</li>
+<li>Dial4teachers</li>
+
 </ul>
 
 </section>
 
 
-
-<!-- AWARD CATEGORIES -->
+<!-- Award Categories -->
 
 <section>
 
 <h2>🏆 Award Categories</h2>
 
-<h3>🥉 Emerging Recognition Awards</h3>
-<p>Nomination Contribution: ₹3,000</p>
+<p>🥉 Emerging Recognition Awards – ₹3,000</p>
 
-<h3>🥈 Excellence Awards</h3>
-<p>Nomination Contribution: ₹7,500</p>
+<p>🥈 Excellence Awards – ₹7,500</p>
 
-<h3>🥇 National Recognition Awards</h3>
-<p>Nomination Contribution: ₹15,000</p>
+<p>🥇 National Recognition Awards – ₹15,000</p>
 
-<h3>💎 International Awards</h3>
-<p>Nomination Contribution: ₹25,000</p>
+<p>💎 International Awards – ₹25,000</p>
 
-<h3>👑 Lifetime & Grand Awards</h3>
-<p>Nomination Contribution: ₹50,000</p>
+<p>👑 Lifetime & Grand Awards – ₹50,000</p>
 
 </section>
 
 
-
-<!-- WHY PARTICIPATE -->
+<!-- Why Participate -->
 
 <section>
 
@@ -111,26 +164,7 @@
 </section>
 
 
-
-<!-- APPLY BUTTON -->
-
-<section class="apply">
-
-<h2>📄 Nominate Yourself</h2>
-
-<p>Limited nominations available.</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSd0G6LUnKMrlgLPu8NstnCWNw9i5lHD09xXHYbNDN9gBBbJtw/viewform" target="_blank">
-
-<button class="apply-btn">Apply Now</button>
-
-</a>
-
-</section>
-
-
-
-<!-- CONTACT -->
+<!-- Contact -->
 
 <section>
 
@@ -145,14 +179,204 @@
 </section>
 
 
+<!-- Apply Section -->
 
-<footer>
+<section>
 
-<p>© 2026 Global Achievers Foundation</p>
+<h2>📄 Nominate Yourself</h2>
 
-</footer>
+<p>Limited nominations available.</p>
+
+<a href="#form">
+
+<button class="apply-btn">
+
+Apply Now
+
+</button>
+
+</a>
+
+</section>
 
 
+<!-- FORM START -->
+
+<div id="form">
+
+<form id="awardForm">
+
+
+<!-- Section 1 -->
+
+<div class="section active">
+
+<h2>Section A – Personal Details</h2>
+
+<input type="text" placeholder="Full Name" required><br><br>
+
+<input type="text" placeholder="Mobile Number" required><br><br>
+
+<input type="email" placeholder="Email ID" required><br><br>
+
+<button type="button" onclick="nextSection()">Next</button>
+
+</div>
+
+
+<!-- Section 2 -->
+
+<div class="section">
+
+<h2>Section B – Professional Details</h2>
+
+<input type="text" placeholder="Organization Name"><br><br>
+
+<input type="text" placeholder="Designation"><br><br>
+
+<button type="button" onclick="prevSection()">Back</button>
+
+<button type="button" onclick="nextSection()">Next</button>
+
+</div>
+
+
+<!-- Section 3 -->
+
+<div class="section">
+
+<h2>Section C – Award Category</h2>
+
+<select id="category" onchange="loadAwards()">
+
+<option value="">Select Category</option>
+
+<option value="3000">Category 1 – Emerging Recognition Awards (₹3000)</option>
+
+<option value="7500">Category 2 – Excellence Awards (₹7500)</option>
+
+<option value="15000">Category 3 – National Recognition Awards (₹15000)</option>
+
+<option value="25000">Category 4 – International Awards (₹25000)</option>
+
+<option value="50000">Category 5 – Lifetime Awards (₹50000)</option>
+
+</select>
+
+<div id="awards" class="awards-list"></div>
+
+<div class="total-box">
+
+Total Contribution ₹ <span id="total">0</span>
+
+</div>
+
+<button type="button" onclick="prevSection()">Back</button>
+
+<button type="button" onclick="nextSection()">Next</button>
+
+</div>
+
+
+<!-- Terms -->
+
+<div class="section">
+
+<h2>Terms & Conditions</h2>
+
+<label><input type="checkbox" required> Information provided is true</label><br>
+
+<label><input type="checkbox" required> Nomination fee is non refundable</label><br>
+
+<label><input type="checkbox" required> Jury decision is final</label><br>
+
+<br>
+
+<button type="button" onclick="prevSection()">Back</button>
+
+<button type="submit">Submit</button>
+
+</div>
+
+</form>
+
+</div>
+
+
+<script>
+
+let currentSection=0;
+
+const sections=document.querySelectorAll(".section");
+
+function nextSection(){
+
+sections[currentSection].classList.remove("active");
+
+currentSection++;
+
+sections[currentSection].classList.add("active");
+
+}
+
+function prevSection(){
+
+sections[currentSection].classList.remove("active");
+
+currentSection--;
+
+sections[currentSection].classList.add("active");
+
+}
+
+
+const awardsData={
+
+3000:["Rising Star Award","Emerging Leader Award","Young Achiever Award"],
+
+7500:["Professional Excellence Award","Business Excellence Award"],
+
+15000:["National Icon Award","Pride of India Award"],
+
+25000:["Global Achiever Award","International Leadership Award"],
+
+50000:["Lifetime Achievement Award","Hall of Fame Award"]
+
+};
+
+function loadAwards(){
+
+const category=document.getElementById("category").value;
+
+const awardsDiv=document.getElementById("awards");
+
+awardsDiv.innerHTML="";
+
+if(!category) return;
+
+awardsData[category].forEach(function(a){
+
+awardsDiv.innerHTML+=
+`<label>
+<input type="checkbox" value="${category}" onchange="calculateTotal()">
+${a}
+</label>`;
+
+});
+
+}
+
+function calculateTotal(){
+
+const categoryFee=parseInt(document.getElementById("category").value);
+
+const selected=document.querySelectorAll("#awards input:checked").length;
+
+document.getElementById("total").innerText=categoryFee*selected;
+
+}
+
+</script>
 
 </body>
 
