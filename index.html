@@ -1,450 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pride of India National Awards 2026</title>
-
-<style>
-
-body{
-font-family:Arial;
-margin:0;
-background:#f4f4f4;
-}
-
-.banner img{
-width:100%;
-}
-
-section{
-background:white;
-padding:30px;
-margin:20px;
-border-radius:8px;
-}
-
-h1,h2{
-color:#b22222;
-}
-
-.apply-btn{
-background:#b22222;
-color:white;
-padding:15px 30px;
-border:none;
-font-size:18px;
-cursor:pointer;
-}
-
-.section{
-display:none;
-padding:30px;
-background:white;
-margin:20px;
-border-radius:8px;
-}
-
-.section.active{
-display:block;
-}
-
-.awards-list label{
-display:block;
-}
-
-.total-box{
-font-size:20px;
-font-weight:bold;
-margin-top:15px;
-color:#b22222;
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Banner -->
-
-<div class="banner">
-
-<img src="assets/banner.jpg">
-
-</div>
-
-
-<!-- Title -->
-
-<section>
-
+<header>
 <h1>🏆 Pride of India National Awards – 2026</h1>
-
 <p>Celebrate Excellence • Honor Achievements • Inspire the Nation</p>
+</header>
 
-</section>
+<section id="event">
+<h2>Event Details</h2>
+<p><b>Date:</b> April 26, 2026</p>
+<p><b>Time:</b> 4:00 PM – 7:00 PM</p>
+<p><b>Venue:</b> Simsan Hotel, Chennai</p>
 
-
-<!-- Event Details -->
-
-<section>
-
-<h2>📅 Event Details</h2>
-
-<p><strong>Date:</strong> April 26, 2026</p>
-
-<p><strong>Time:</strong> 4:00 PM – 7:00 PM</p>
-
-<p><strong>Venue:</strong> Simsan Hotel, Chennai</p>
-
-<h3>Organized By</h3>
-
+<p><b>Organized By</b></p>
 <ul>
-
 <li>Global Achievers Foundation</li>
 <li>G & G Group of Institutions</li>
-
 </ul>
 
-<h3>Co-Sponsored By</h3>
-
+<p><b>Co-Sponsored By</b></p>
 <ul>
-
 <li>Veda Mandir Education</li>
 <li>Dial4teachers</li>
-
 </ul>
 
 </section>
 
+<section id="categories">
 
-<!-- Award Categories -->
+<h2>Award Categories</h2>
 
-<section>
+<h3>🥉 Emerging Recognition Awards</h3>
+<p>Contribution ₹3,000</p>
 
-<h2>🏆 Award Categories</h2>
+<h3>🥈 Excellence Awards</h3>
+<p>Contribution ₹7,500</p>
 
-<p>🥉 Emerging Recognition Awards – ₹3,000</p>
+<h3>🥇 National Recognition Awards</h3>
+<p>Contribution ₹15,000</p>
 
-<p>🥈 Excellence Awards – ₹7,500</p>
+<h3>💎 International Awards</h3>
+<p>Contribution ₹25,000</p>
 
-<p>🥇 National Recognition Awards – ₹15,000</p>
-
-<p>💎 International Awards – ₹25,000</p>
-
-<p>👑 Lifetime & Grand Awards – ₹50,000</p>
+<h3>👑 Lifetime Awards</h3>
+<p>Contribution ₹50,000</p>
 
 </section>
 
-
-<!-- Why Participate -->
-
 <section>
 
-<h2>✨ Why Participate</h2>
+<h2>Why Participate</h2>
 
 <ul>
-
-<li>Get recognized on a national platform</li>
-
-<li>Enhance professional credibility</li>
-
-<li>Network with leaders and achievers</li>
-
-<li>Receive prestigious trophy and certificate</li>
-
-<li>Media and public recognition</li>
-
+<li>National level recognition</li>
+<li>Professional credibility</li>
+<li>Networking opportunities</li>
+<li>Trophy and certificate</li>
+<li>Media recognition</li>
 </ul>
 
 </section>
 
+<section>
 
-<!-- Contact -->
+<h2>Apply for Nomination</h2>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfB2WitOhfuI-NTHCTzYL5enq5KeNYIDTPwjVi3Y0w9UMTzHA/viewform" target="_blank">
+<button>Apply Now</button>
+</a>
+
+</section>
 
 <section>
 
-<h2>📞 Contact</h2>
+<h2>Contact</h2>
 
 <p>Shalu – 9841725800</p>
-
 <p>Rita – 8610577513</p>
-
 <p>Geetha – 7305403416</p>
 
 </section>
 
-
-<div id="form">
-
-<form id="awardForm">
-
-
-<!-- Section 1 -->
-
-<div class="section active">
-
-<h2>Section A – Personal Details</h2>
-
-<input type="text" placeholder="Full Name (as to appear on Certificate)" required size=50><br><br>
-
-<select id="gender" name="gender">
-  <option value="">--Select Gender--</option>
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-  <option value="Other">Other</option>
-</select><br><br>  
-
-<input type="date" placeholder="Date of Birth" required><br><br>  
-
-<input type="text" placeholder="Mobile Number" required><br><br>
-
-<input type="text" placeholder="Whatsapp Number" required><br><br>
-  
-<input type="email" placeholder="Email ID" required><br><br>
-
-<input type="text" placeholder="Address" required><br><br>
-
-<input type="text" placeholder="City" required><br><br>  
-  
-<input type="text" placeholder="Pin Code" required><br><br>
-
-<input type="text" placeholder="State" required><br><br>
-
-<input type="text" placeholder="Country" required><br><br>  
-  
-<button type="button" onclick="nextSection()">Next</button>
-
-</div>
-
-
-<!-- Section 2 -->
-
-<div class="section">
-
-<h2>Section B – Professional Details</h2>
-
-<input type="text" placeholder="Organization Name" required><br><br>
-
-<input type="text" placeholder="Designation" required><br><br>
-
-<input type="text" placeholder="Years of Experience" required><br><br>  
-
-<input type="text" placeholder="Field / Industry" required><br><br>  
-
-<input type="text" placeholder="Website (if any)" ><br><br>  
-
-<input type="text" placeholder="Social Media Links" required><br><br>  
-  
-<button type="button" onclick="prevSection()">Back</button>
-
-<button type="button" onclick="nextSection()">Next</button>
-
-</div>
-
-
-<!-- Section 3 -->
-
-<div class="section">
-
-<h2>Section C – Award Category</h2>
-
-<select id="category" onchange="loadAwards()">
-
-<option value="">Select Category</option>
-
-<option value="3000">Category 1 – Emerging Recognition Awards (₹3000)</option>
-
-<option value="7500">Category 2 – Excellence Awards (₹7500)</option>
-
-<option value="15000">Category 3 – National Recognition Awards (₹15000)</option>
-
-<option value="25000">Category 4 – International Awards (₹25000)</option>
-
-<option value="50000">Category 5 – Lifetime Awards (₹50000)</option>
-
-</select>
-
-<div id="awards" class="awards-list"></div>
-
-<div class="total-box">
-
-Total Contribution ₹ <span id="total">0</span>
-
-</div>
-
-<button type="button" onclick="prevSection()">Back</button>
-
-<button type="button" onclick="nextSection()">Next</button>
-
-</div>
-
-<!-- Section 4 -->
-
-<div class="section">
-
-<h2>🔹 Section E – Upload Section</h2>
-
-<p>Profile Photo (JPEG/PNG)</p>
-<input type="file" name="profile_photo" accept=".jpg,.jpeg,.png" required><br><br>
-
-<p>ID Proof (PDF/JPEG)</p>
-<input type="file" name="id_proof" accept=".pdf,.jpg,.jpeg" required><br><br>
-
-<p>Achievement Proof Documents (PDF)</p>
-<input type="file" name="achievement_proof" accept=".pdf" required><br><br>
-
-<p>Company Logo (Optional)</p>
-<input type="file" name="company_logo" accept=".jpg,.jpeg,.png">
-
-<button type="button" onclick="prevSection()">Back</button>
-
-<button type="button" onclick="nextSection()">Next</button>  
-  
-</div>  
-
-  
-<!-- Terms -->
-
-<div class="section">
-
-<h2>Terms & Conditions</h2>
-
-<p>
-📜 *TERMS & CONDITIONS*
-<br>
-1️⃣ *Eligibility:* The nominee must be minimum 5 years age or above at the time of application.<br>
-2️⃣ *Accurate Information:* All information submitted must be true, complete, and supported with valid documents wherever required.<br>
-3️⃣ *Jury Decision:* All nominations will be reviewed by the jury panel, and the decision of the jury shall be final and binding.<br>
-4️⃣ *Nomination & Evaluation Contribution:* The applicable Nomination & Evaluation Contribution is mandatory for processing the application.<br>
-5️⃣ *Non-Refund Policy:* The Nomination & Evaluation Contribution once paid is non-refundable and non-transferable under any circumstances.<br>
-6️⃣ *Selection Rights:* The organizers reserve the right to accept, shortlist, upgrade, downgrade, or reject any nomination without assigning reasons.<br>
-7️⃣ *Category Allocation:* The organizing committee reserves the right to shift a nominee to a suitable award category based on profile evaluation.<br>
-8️⃣ *Usage of Media:* By applying, the nominee grants permission to use their name, photograph, and profile details for promotional, media, and event purposes.<br>
-9️⃣ *Event Participation:* Awardees are expected to attend the ceremony in person. In case of absence, courier charges for trophy/certificate (if applicable) shall be borne by the awardee.<br>
-🔟 *Code of Conduct:* Any form of misrepresentation, false claims, or misconduct may lead to immediate disqualification without refund.<br>
-  
-</p>  
-
-<label><input type="checkbox" required> Information provided is true</label><br>
-
-<label><input type="checkbox" required> Nomination fee is non refundable</label><br>
-
-<label><input type="checkbox" required> Jury decision is final</label><br>
-
-<br>
-
-<button type="button" onclick="prevSection()">Back</button>
-
-<button type="submit">Submit</button>
-
-</div>
-
-</form>
-
-</div>
-
-
-<script>
-
-let currentSection=0;
-
-const sections=document.querySelectorAll(".section");
-
-function nextSection(){
-
-sections[currentSection].classList.remove("active");
-
-currentSection++;
-
-sections[currentSection].classList.add("active");
-
-}
-
-function prevSection(){
-
-sections[currentSection].classList.remove("active");
-
-currentSection--;
-
-sections[currentSection].classList.add("active");
-
-}
-
-
-const awardsData={
-
-3000:["Rising Star Award – Young professionals showing early success","Emerging Leader Award – Upcoming leaders in any field",
-"Young Achiever Award – Individuals under 35 with notable achievements","Startup Star Award – New startup founders (1–5 years)",
-"Youth Inspiration Award – Youth motivating others","Community Star Award – Local community contributors","Women Achiever Award – Women excelling in any profession",
-"Social Contributor Award – Individuals involved in social work","Excellence in Service Award – Service-oriented professionals",
-"Promising Talent Award – Individuals with exceptional potential"],
-
-7500:["Excellence Award – Professionals with consistent performance","Professional Excellence Award – Doctors, Lawyers, Teachers, Engineers, etc.",
-"Business Excellence Award – Business owners & entrepreneurs","Education Excellence Award – Educators & institution heads",
-"Health & Wellness Excellence Award – Healthcare & wellness experts","Innovation Excellence Award – Innovators & creative thinkers",
-"Social Impact Award – NGOs & social activists","Leadership Excellence Award – Team leaders & managers","Cultural Excellence Award – Artists & cultural promoters",
-"Brand Excellence Award – Business brands with strong reputation"],
-  
-15000:["National Icon Award – Influential personalities with national presence","Pride of India Award – Individuals contributing to nation-building",
-"Bharat Excellence Award – Senior professionals with impact","National Leadership Award – Leaders with large-scale influence",
-"Icon of Influence Award – Public figures & influencers","Nation Builder Award – Contributors to societal development",
-"Inspirational Leader Award – Motivational personalities","Industry Icon Award – Industry-leading professionals",
-"Corporate Leader Award – Corporate executives & directors","Visionary Leader Award – Strategic thinkers & founders"],
-  
-
-25000:["International Leadership Award – Global business/social leaders","Global Icon Award – International influencers",
-"International Excellence Award – Professionals with global reach","World Impact Award – Individuals with worldwide impact",
-"Global Business Leader Award – International entrepreneurs","International Social Excellence Award – Global social activists",
-"Global Visionary Award – Forward-thinking global leaders","International Brand Leader Award – Global brands & founders",
-"Global Inspiration Award – International motivational personalities"],
-
-50000:["Lifetime Achievement Award – 20+ years of outstanding contribution","Hall of Fame Award – Highly reputed senior personalities",
-"Supreme Excellence Award – Top achievers in their field","Grand Icon Award – Nationally celebrated personalities",
-"Diamond Excellence Award – Elite high-level achievers","Platinum Leadership Award – Senior executive leaders",
-"Pride of the Nation Award – Exceptional national contributors","Universal Excellence Award – Multi-field contributors",
-"Legendary Leader Award – Long-standing influential leaders","Eminent Personality Award – Highly respected dignitaries"]
-  
-};
-
-function loadAwards(){
-
-const category=document.getElementById("category").value;
-
-const awardsDiv=document.getElementById("awards");
-
-awardsDiv.innerHTML="";
-
-if(!category) return;
-
-awardsData[category].forEach(function(a){
-
-awardsDiv.innerHTML+=
-`<label>
-<input type="checkbox" value="${category}" onchange="calculateTotal()">
-${a}
-</label>`;
-
-});
-
-}
-
-function calculateTotal(){
-
-const categoryFee=parseInt(document.getElementById("category").value);
-
-const selected=document.querySelectorAll("#awards input:checked").length;
-
-document.getElementById("total").innerText=categoryFee*selected;
-
-}
-
-</script>
+<footer>
+<p>© Global Achievers Foundation</p>
+</footer>
 
 </body>
-
 </html>
