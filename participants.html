@@ -157,8 +157,13 @@ document.getElementById("details").innerHTML = `
 <p><b>Experience:</b> ${d.exp} years</p>
 <p><b>Industry:</b> ${d.industry}</p>
 
-${d.website ? `<p><b>Website:</b> ${d.website}</p>` : ""}
-${d.social ? `<p><b>Social:</b> ${d.social}</p>` : ""}
+${d.website && d.website.trim() !== "" 
+  ? `<p><b>Website:</b> <a href="${d.website}" target="_blank">${d.website}</a></p>` 
+  : ""}
+
+${d.social && d.social.trim() !== "" 
+  ? `<p><b>Social:</b> <a href="${d.social}" target="_blank">${d.social}</a></p>` 
+  : ""}
 </div>
 
 <div class="section">
