@@ -184,11 +184,11 @@ ${d.photo ? `<a href="${d.photo}" target="_blank">Profile Photo</a>` : ""}
 <br>
 ${d.idProof ? `<a href="${d.idProof}" target="_blank">ID Proof</a>` : ""}
 <br>
+${d.pdf ? `<a href="${d.pdf}" target="_blank">Achievement Document</a>` : ""}
+<br>
 ${d.logo && d.logo.trim() !== "" && d.logo.startsWith("http")
   ? `<a href="${d.logo}" target="_blank">Company Logo</a>` 
   : ""}
-<br>
-${d.pdf ? `<a href="${d.pdf}" target="_blank">Achievement Document</a>` : ""}
 </div>
 
 `;
