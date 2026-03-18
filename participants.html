@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Participants Dashboard</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f5f5f5;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px #ccc;
+}
+
+h2{
+color:#333;
+border-bottom:2px solid #eee;
+padding-bottom:5px;
+}
+
+select{
+width:100%;
+padding:10px;
+margin-bottom:20px;
+}
+
+.section{
+margin-bottom:20px;
+padding:15px;
+background:#fafafa;
+border-radius:8px;
+}
+
+img{
+width:120px;
+cursor:pointer;
+border-radius:5px;
+margin:5px;
+}
+
+/* Modal */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+}
+
+.modal img{
+display:block;
+margin:auto;
+max-width:80%;
+margin-top:5%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🏆 Participants Dashboard</h2>
+
+<select id="participantSelect" onchange="showDetails()">
+<option value="">Select Participant</option>
+</select>
+
+<div id="details"></div>
+
+</div>
+
+<!-- Image Popup -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+<img id="modalImg">
+</div>
+
+<script>
+
+const sheetUrl = "YOUR_WEBAPP_URL"; // Apps Script JSON API
+
+let allData = [];
+
+/* FETCH DATA */
+
+fetch(sheetUrl)
+.then(res => res.json())
+.then(data => {
+
+allData = data;
+
+const dropdown = document.getElementById("participantSelect");
+
+data.forEach((row,index)=>{
+const option = document.createElement("option");
+option.value = index;
+option.text = row.name + " - " + row.mobile;
+dropdown.appendChild(option);
+});
+
+});
+
+/* SHOW DETAILS */
+
+function showDetails(){
+
+const index = document.getElementById("participantSelect").value;
+
+if(index === "") return;
+
+const d = allData[index];
+
+let subCategory = "";
+
+if(d.mainCategory.includes("Category 1")) subCategory = d.cat1;
+if(d.mainCategory.includes("Category 2")) subCategory = d.cat2;
+if(d.mainCategory.includes("Category 3")) subCategory = d.cat3;
+if(d.mainCategory.includes("Category 4")) subCategory = d.cat4;
+if(d.mainCategory.includes("Category 5")) subCategory = d.cat5;
+
+document.getElementById("details").innerHTML = `
+
+<div class="section">
+<h2>👤 Personal Details</h2>
+<p><b>Member ID:</b> ${d.memberId}</p>
+<p><b>Name:</b> ${d.name}</p>
+<p><b>Gender:</b> ${d.gender}</p>
+<p><b>DOB:</b> ${d.dob}</p>
+<p><b>Mobile:</b> ${d.mobile}</p>
+<p><b>Email:</b> ${d.email}</p>
+</div>
+
+<div class="section">
+<h2>🏠 Address</h2>
+<p>${d.address}, ${d.city}, ${d.state}, ${d.country} - ${d.pincode}</p>
+</div>
+
+<div class="section">
+<h2>💼 Professional Details</h2>
+<p><b>Organization:</b> ${d.org}</p>
+<p><b>Designation:</b> ${d.designation}</p>
+<p><b>Experience:</b> ${d.exp} years</p>
+<p><b>Industry:</b> ${d.industry}</p>
+
+${d.website ? `<p><b>Website:</b> ${d.website}</p>` : ""}
+${d.social ? `<p><b>Social:</b> ${d.social}</p>` : ""}
+</div>
+
+<div class="section">
+<h2>🏆 Award Details</h2>
+<p><b>Main Category:</b> ${d.mainCategory}</p>
+<p><b>Selected Awards:</b> ${subCategory}</p>
+</div>
+
+<div class="section">
+<h2>📜 Detailed Profile</h2>
+<p><b>Brief Profile:</b><br>${d.profile}</p>
+<p><b>Achievements:</b><br>${d.achievements}</p>
+<p><b>Awards:</b><br>${d.awards}</p>
+<p><b>Social Impact:</b><br>${d.impact}</p>
+<p><b>Why Selected:</b><br>${d.why}</p>
+</div>
+
+<div class="section">
+<h2>📂 Documents</h2>
+
+${d.photo ? `<img src="${d.photo}" onclick="openModal(this.src)">` : ""}
+${d.idProof ? `<img src="${d.idProof}" onclick="openModal(this.src)">` : ""}
+${d.logo ? `<img src="${d.logo}" onclick="openModal(this.src)">` : ""}
+
+<br>
+
+${d.pdf ? `<a href="${d.pdf}" target="_blank">📄 View Achievement Document</a>` : ""}
+
+</div>
+
+`;
+
+}
+
+/* IMAGE MODAL */
+
+function openModal(src){
+document.getElementById("imgModal").style.display="block";
+document.getElementById("modalImg").src = src;
+}
+
+function closeModal(){
+document.getElementById("imgModal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
