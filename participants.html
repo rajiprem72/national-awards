@@ -179,14 +179,14 @@ ${d.social ? `<p><b>Social:</b> ${d.social}</p>` : ""}
 <div class="section">
 <h2>📂 Documents</h2>
 
-${d.photo ? `<img src="${d.photo}" onclick="openModal(this.src)">` : ""}
-${d.idProof ? `<img src="${d.idProof}" onclick="openModal(this.src)">` : ""}
-${d.logo ? `<img src="${d.logo}" onclick="openModal(this.src)">` : ""}
 
+${d.photo ? `<a href="${d.photo}" target="_blank">Profile Photo</a>` : ""}
 <br>
-
+${d.idProof ? `<a href="${d.idProof}" target="_blank">ID Proof</a>` : ""}
+<br>
+${d.logo ? `<a href="${d.logo}" target="_blank">Logo </a>` : ""}
+<br>
 ${d.pdf ? `<a href="${d.pdf}" target="_blank">📄 View Achievement Document</a>` : ""}
-
 </div>
 
 `;
